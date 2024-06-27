@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F224A323-BD9F-4999-9423-DA7C0AA51B73}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RayTracer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\\icho23-home01\vol_home01\home\s2210573\Downloads\fltk-1.3.3</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>\\icho23-home01\vol_home01\home\s2210573\Downloads\fltk-1.3.3\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>comctl32.lib;wsock32.lib;opengl32.lib;glu32.lib;odbc32.lib;odbccp32.lib;fltkd.lib;fltkformsd.lib;fltkgld.lib;fltkimagesd.lib;fltkjpegd.lib;fltkpngd.lib;fltkzlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBCMTd;MSVCRT</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\\icho23-home01\vol_home01\home\s2210573\Downloads\fltk-1.3.3</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>\\icho23-home01\vol_home01\home\s2210573\Downloads\fltk-1.3.3\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>comctl32.lib;wsock32.lib;opengl32.lib;glu32.lib;odbc32.lib;odbccp32.lib;fltk.lib;fltkforms.lib;fltkgl.lib;fltkimages.lib;fltkjpeg.lib;fltkpng.lib;fltkzlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;MSVCRTd</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\fileio\buffer.h" />
+    <ClInclude Include="src\fileio\CImg.h" />
+    <ClInclude Include="src\fileio\imageio.h" />
+    <ClInclude Include="src\general.h" />
+    <ClInclude Include="src\getopt.h" />
+    <ClInclude Include="src\parser\Parser.h" />
+    <ClInclude Include="src\parser\ParserException.h" />
+    <ClInclude Include="src\parser\Token.h" />
+    <ClInclude Include="src\parser\Tokenizer.h" />
+    <ClInclude Include="src\RayTracer.h" />
+    <ClInclude Include="src\SceneObjects\Box.h" />
+    <ClInclude Include="src\SceneObjects\Cone.h" />
+    <ClInclude Include="src\SceneObjects\Cylinder.h" />
+    <ClInclude Include="src\SceneObjects\Sphere.h" />
+    <ClInclude Include="src\SceneObjects\Square.h" />
+    <ClInclude Include="src\SceneObjects\trimesh.h" />
+    <ClInclude Include="src\scene\BSPTree.h" />
+    <ClInclude Include="src\scene\camera.h" />
+    <ClInclude Include="src\scene\light.h" />
+    <ClInclude Include="src\scene\material.h" />
+    <ClInclude Include="src\scene\ray.h" />
+    <ClInclude Include="src\scene\scene.h" />
+    <ClInclude Include="src\ui\CommandLineUI.h" />
+    <ClInclude Include="src\ui\debuggingView.h" />
+    <ClInclude Include="src\ui\debuggingWindow.h" />
+    <ClInclude Include="src\ui\dialog.h" />
+    <ClInclude Include="src\ui\GraphicalUI.h" />
+    <ClInclude Include="src\ui\ModelerCamera.h" />
+    <ClInclude Include="src\ui\TraceGLWindow.h" />
+    <ClInclude Include="src\ui\TraceUI.h" />
+    <ClInclude Include="src\vecmath\mat.h" />
+    <ClInclude Include="src\vecmath\vec.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\fileio\buffer.cpp" />
+    <ClCompile Include="src\fileio\imageio.cpp" />
+    <ClCompile Include="src\getopt.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\parser\Parser.cpp" />
+    <ClCompile Include="src\parser\ParserException.cpp" />
+    <ClCompile Include="src\parser\Token.cpp" />
+    <ClCompile Include="src\parser\Tokenizer.cpp" />
+    <ClCompile Include="src\RayTracer.cpp" />
+    <ClCompile Include="src\SceneObjects\Box.cpp" />
+    <ClCompile Include="src\SceneObjects\Cone.cpp" />
+    <ClCompile Include="src\SceneObjects\Cylinder.cpp" />
+    <ClCompile Include="src\SceneObjects\Sphere.cpp" />
+    <ClCompile Include="src\SceneObjects\Square.cpp" />
+    <ClCompile Include="src\SceneObjects\trimesh.cpp" />
+    <ClCompile Include="src\scene\camera.cpp" />
+    <ClCompile Include="src\scene\light.cpp" />
+    <ClCompile Include="src\scene\material.cpp" />
+    <ClCompile Include="src\scene\ray.cpp" />
+    <ClCompile Include="src\scene\scene.cpp" />
+    <ClCompile Include="src\ui\CommandLineUI.cpp" />
+    <ClCompile Include="src\ui\debuggingView.cpp" />
+    <ClCompile Include="src\ui\debuggingWindow.cxx" />
+    <ClCompile Include="src\ui\glObjects.cpp" />
+    <ClCompile Include="src\ui\GraphicalUI.cpp" />
+    <ClCompile Include="src\ui\ModelerCamera.cpp" />
+    <ClCompile Include="src\ui\TraceGLWindow.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

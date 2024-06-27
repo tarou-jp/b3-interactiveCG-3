@@ -1,0 +1,4 @@
+﻿  RayTracer.cpp
+\\icho23-home01\vol_home01\home\s2210573\Downloads\RayTracer_Skelton_vs2013\RayTracer\RayTracer\src\RayTracer.cpp(91,21): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+\\icho23-home01\vol_home01\home\s2210573\Downloads\RayTracer_Skelton_vs2013\RayTracer\RayTracer\src\RayTracer.cpp(116,21): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+  RayTracer.vcxproj -> \\icho23-home01\vol_home01\home\s2210573\Downloads\RayTracer_Skelton_vs2013\RayTracer\Debug\RayTracer.exe
